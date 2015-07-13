@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Meme Creator by Shovon</title>
+		<style>
+		@import url(http://fonts.googleapis.com/css?family=Changa+One);
+		@import url(http://fonts.googleapis.com/css?family=Kavoon);
+		@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+		@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+		@import url(http://fonts.googleapis.com/css?family=Galindo);
+		body{
+			margin: 2px auto;
+		}
+		#wrapper {
+			width: 100%;
+			margin: 0px auto;
+			padding: 0px;
+		}
+		#content {
+			width: 95%;	
+			padding: 0px 20px;
+			margin: 10px auto;
+			background: rgb(247, 247, 247);
+			border: 1px solid rgba(147, 184, 189,0.8);
+			-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			        box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			-webkit-box-shadow: 5px;
+			-moz-border-radius: 5px;
+				 border-radius: 5px;
+			  -o-border-radius: 5px;
+		 -webkit-border-radius: 5px;		
+		}
+		#wrapper h1 {
+			background: -webkit-repeating-linear-gradient(-45deg, 
+			 rgb(18, 83, 93) , 
+			 rgb(18, 83, 93) 20px, 
+			 rgb(64, 111, 118) 20px, 
+			 rgb(64, 111, 118) 40px, 
+			 rgb(18, 83, 93) 40px);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			font-size: 26px;
+			color: rgb(6, 106, 117);
+			padding: 2px 0px;
+			font-family: Impact;
+			font-weight: bold;
+			text-align: center;
+		}
+		h1, h2 {
+			color: #363636;
+			font-family: Georgia, serif;
+			line-height: 1.8em;
+			font-weight: 500;
+			padding: 12px 0;
+			text-align: center;
+			font-size: 24px;
+			margin: 0px;
+			margin-top: 0px;
+			margin-bottom: 2px;
+		}
+		#wrapper h1:after {
+			content: ' ';
+			display: block;
+			width: 100%;
+			height: 2px;
+			margin-top: 10px;
+			background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0)));
+			background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+			background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+			background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+			background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+		}
+		#wrapper p{
+			margin:10px;
+		}
+		#wrapper label{
+			color: rgb(64, 92, 96);
+			font-size: 102%; 
+		}
+
+		/**** advanced input styling ****/
+		/* placeholder */
+		::-webkit-input-placeholder  { 
+			color: rgb(190, 188, 188); 
+			font-style: italic;
+		}
+		input:-moz-placeholder,
+		textarea:-moz-placeholder{ 
+			color: rgb(190, 188, 188);
+			font-style: italic;
+		} 
+		input {
+		  outline: none;
+		}
+
+		/* all the input except submit and checkbox */
+
+		input:not([type="checkbox"]){
+			width: 93%;
+			margin-top: 4px;
+			padding: 8px 6px;	
+			border: 1px solid rgb(178, 178, 178);
+			-webkit-appearance: textfield;
+			-webkit-box-sizing: content-box;
+			  -moz-box-sizing : content-box;
+			       box-sizing : content-box;
+			-webkit-border-radius: 3px;
+			   -moz-border-radius: 3px;
+			        border-radius: 3px;
+			-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+			   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+			        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+			-webkit-transition: all 0.2s linear;
+			   -moz-transition: all 0.2s linear;
+			     -o-transition: all 0.2s linear;
+			        transition: all 0.2s linear;
+			        font-family: Georgia,Arial;
+			        
+		}
+		input:not([type="checkbox"]):active,
+		input:not([type="checkbox"]):focus{
+		    color: #333;
+		    border-color: rgba(41, 92, 161, 0.4);
+		    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+		    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+		    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+		    outline: 0 none;
+		} 
+
+
+		/*styling button */
+		button{
+			width: inherit;
+			cursor: pointer;	
+			background: rgb(61, 157, 179);
+			padding: 2px 20px;
+			font-family: Arial,sans-serif;
+			background: rgb(61, 157, 179);
+			color: #fff;
+			font-size: 20px;	
+			border: 1px solid rgb(28, 108, 122);	
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+			-webkit-border-radius: 3px;
+			   -moz-border-radius: 3px;
+			        border-radius: 3px;	
+			-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+			        0px 0px 0px 3px rgb(254, 254, 254),
+			        0px 5px 3px 3px rgb(210, 210, 210);
+			   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+			        0px 0px 0px 3px rgb(254, 254, 254),
+			        0px 5px 3px 3px rgb(210, 210, 210);
+			        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+			        0px 0px 0px 3px rgb(254, 254, 254),
+			        0px 5px 3px 3px rgb(210, 210, 210);
+			-webkit-transition: all 0.2s linear;
+			   -moz-transition: all 0.2s linear;
+			     -o-transition: all 0.2s linear;
+			        transition: all 0.2s linear;
+		}
+		button:hover{
+			background: rgb(74, 179, 198);
+		}
+		button:active,
+		button:focus{
+			background: rgb(40, 137, 154);
+			top: 1px;
+			border: 1px solid rgb(12, 76, 87);	
+			-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+			   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+			        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+		}
+
+		#my_canvas{
+			padding: 0;
+			margin: 10px auto;
+			margin-top: 0px;
+			border: 2px solid teal;
+			display: none;
+		}
+		#show_image{
+			display: none;
+		}
+		table{
+			margin-bottom: 10px;
+		}
+		td{
+			vertical-align: top;
+			padding-bottom: 10px;
+		}
+		td.form_td{
+			padding: 0px 5px;
+			background: rgb(247, 247, 247);
+			border: 1px solid rgba(147, 184, 189,0.8);
+			-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			        box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			-webkit-box-shadow: 5px;
+			-moz-border-radius: 5px;
+				 border-radius: 5px;
+			  -o-border-radius: 5px;
+		 -webkit-border-radius: 5px;		
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+		#footer{
+			margin: 0px;
+		}
+		/*Ribbon CSS*/
+		.nicediv{
+			padding: 0px 20px;
+			margin: 0px auto;
+			margin-bottom: 10px;
+			background: rgb(247, 247, 247);
+			border: 1px solid rgba(147, 184, 189,0.8);
+			-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			        box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+			-webkit-box-shadow: 5px;
+			-moz-border-radius: 5px;
+				 border-radius: 5px;
+			  -o-border-radius: 5px;
+		 -webkit-border-radius: 5px;			
+		 text-align:center;
+			padding:5px;
+			-webkit-transition: all .5s ease-in-out;
+			-moz-transition: all .5s ease-in-out;
+			-ms-transition: all .5s ease-in-out;
+			-o-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			color: rgb(6, 106, 117);	
+		}
+		.nicediv:hover{
+			-webkit-transition: all .5s ease-in-out;
+			-moz-transition: all .5s ease-in-out;
+			-ms-transition: all .5s ease-in-out;
+			-o-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			cursor: pointer;
+			background: rgb(74, 179, 198);
+			color: #fff;
+			-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+			-moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+			box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+		}
+		.nicediv h3{
+			 background: -webkit-repeating-linear-gradient(-45deg, 
+			 rgb(18, 83, 93) , 
+			 rgb(18, 83, 93) 20px, 
+			 rgb(64, 111, 118) 20px, 
+			 rgb(64, 111, 118) 40px, 
+			 rgb(18, 83, 93) 40px);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			font-size: 18px;
+			color: rgb(6, 106, 117);
+			font-family: Impact;
+			font-weight: normal;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+		/*checkbox*/	
+		input[type=checkbox]
+		{
+			border: 1px solid #c0c0c0;
+			margin: 0 0.1em 0 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 1em;
+			width: 1.25em;
+			height: 1.25em;
+			vertical-align: text-top;
+			display: inline-block;
+			font-family: verdana;
+		}
+
+		</style>
+
+	</head>
+	<body>
+		<div id="wrapper">
+		    <div id="content">
+		        <h1>Meme Creator</h1> 
+		        <table width="100%">
+		        	<tr width="100%">
+		        		<td width="70%" class="form_td">
+							<p>
+								<img src="" alt="" id="show_image">
+							</p>
+					        <p>
+								<canvas id="my_canvas" resize="true"></canvas>
+							</p>			        			
+		        		</td>
+		        		<td width="30%" class="form_td">
+							<p> 
+							    <label for="user_image">Upload Image</label>
+							    <input class="pic" type="file" id="user_image" tabindex="1" onchange="preview_image()" />
+							</p>                                
+							<p>
+								<label for="top_line">Top Line</label><br>
+								<input type="text" id="top_line" onkeyup="create_meme()" placeholder="Write top line here">				
+							</p>
+							<p>
+								<label for="bottom_line">Bottom Line</label><br>			
+								<input type="text" id="bottom_line" onkeyup="create_meme()" placeholder="Write bottom line here">				
+							</p>
+							<p>
+								<label for="text_color1">Background Text Color</label><br>			
+								<input type="color" id="text_color1" onchange="create_meme()" value="#000000">				
+							</p>
+							<p>
+								<label for="text_color2">Foreground Text Color</label><br>			
+								<input type="color" id="text_color2" onchange="create_meme()" value="#f4f4f1">				
+							</p>
+							<p>
+								<label for="font_select">Select Font</label><br>			
+								<select id="font_select" onchange="create_meme()">
+									<option value="Impact" selected="">Impact</option>
+									<option value="Changa One">Changa One</option>
+									<option value="Kavoon">Kavoon</option>
+									<option value="Fredericka the Great">Fredericka the Great</option>
+									<option value="Alfa Slab One">Alfa Slab One</option>
+									<option value="Galindo">Galindo</option>
+								</select>				
+							</p>							
+							<p>
+								<!-- <label>Effects</label> <br> -->
+								<label for="gray_image">Black & White</label>		
+								<input type="checkbox" id="gray_image" onchange="check_effect(this.id)" value="true">	
+								<label for="sepia_image">Sepia</label>		
+								<input type="checkbox" id="sepia_image" onchange="check_effect(this.id)" value="true">		
+								<label for="bright_image">Bright</label>		
+								<input type="checkbox" id="bright_image" onchange="check_effect(this.id)" value="true">
+								<label for="invert_image">Invert</label>		
+								<input type="checkbox" id="invert_image" onchange="check_effect(this.id)" value="true">
+							</p>						
+							<p> 
+								<button id="save" onclick="save_meme()">Save Image</button>								
+							</p>	
+		        		</td>
+		        	</tr>
+		        </table>
+		        <!--h2 id="footer"> Created by shovon</h2-->
+				<div id="rib" class="nicediv" title="Click to visit my profile">
+					<h3>Created by Shovon</h3>
+				</div>
+		    </div>						
+		</div>
+		<script>
+			function change_font()
+			{
+				my_val=document.getElementById("font_select").value;
+				font_details="20pt "+my_val;
+				my_ctx.font=font_details;
+			}
+			function make_gray(r,g,b)
+			{
+				y=(r*.2126)+(g*.7152)+(b*.0722);
+				return y;
+			}
+			function make_sepia(r,g,b)
+			{
+				rr=(r*.393)+(g*.769)+(b*.189);
+				gg=(r*.349)+(g*.686)+(b*.168);
+				bb=(r*.272)+(g*.534)+(b*.131);
+				return {r:rr,g:gg,b:bb};
+			}
+			function make_bright(r,g,b)
+			{
+				rr=r+30;
+				gg=g+30;
+				bb=b+30;
+				return {r:rr,g:gg,b:bb};
+			}	
+			function make_invert(r,g,b)
+			{
+				rr=255-r;
+				gg=255-g;
+				bb=255-b;
+				return {r:rr,g:gg,b:bb};
+			}			
+			function preview_image()
+			{
+				var my_file_reader=new FileReader();
+				my_file_reader.readAsDataURL(document.getElementById("user_image").files[0]);
+				my_file_reader.onload=function(evt)
+				{
+					document.getElementById("show_image").src=evt.target.result;
+					create_meme();
+				}
+			}
+			function canvas_init()
+			{
+				check_image_avail=0;
+				my_image=document.getElementById("show_image");
+				my_image_src=my_image.src;
+				my_image_src_len=my_image_src.length;
+				my_image_src_last4_char=my_image_src.substr(my_image_src_len-4,4);
+				if(my_image_src_last4_char!="html")
+				{
+					check_image_avail=1;
+				}
+				my_canvas=document.getElementById("my_canvas");
+				my_canvas.style.display="block";
+				my_ctx=my_canvas.getContext("2d");
+				get_w=600;
+				get_h=300;
+				if(check_image_avail==1)
+				{
+					get_w=my_image.width;
+					get_h=my_image.height;
+					if(get_w>800)
+					{
+						my_ctx.scale(.1,.1);
+						rat=get_w/get_h;
+						get_w=800.0;
+						get_h=get_w/rat;
+					}
+					my_canvas.height=get_h;
+					my_canvas.width=get_w;
+					my_ctx.drawImage(my_image,0,0,get_w,get_h);		
+				}
+				else
+				{
+					my_canvas.height=get_h;
+					my_canvas.width=get_w;
+					my_ctx.fillStyle="aliceblue";
+					my_ctx.fillRect(0,0,600,300);			
+				}
+				w=get_w;
+				h=get_h;
+				my_ctx.shadowBlur=0;
+				change_font();
+				my_ctx.textAlign="center";	
+				set_color();
+			}
+
+			function set_color()
+			{
+				text_color1=document.getElementById("text_color1").value;
+				text_color2=document.getElementById("text_color2").value;		
+				my_ctx.strokeStyle=text_color1;	
+				my_ctx.fillStyle=text_color2;
+			}
+			function canvas_top_write(my_id)
+			{
+				my_val=document.getElementById(my_id).value;
+				my_ctx.fillText(my_val,w/2,h-(h-25));
+				my_ctx.lineWidth=1;
+				my_ctx.strokeText(my_val,w/2,h-(h-25));		
+			}
+			function canvas_bottom_write(my_id)
+			{
+				my_val=document.getElementById(my_id).value;
+				my_ctx.fillText(my_val,w/2,(h-5));
+				my_ctx.lineWidth=1;
+				my_ctx.strokeText(my_val,w/2,(h-5));		
+			}
+			function create_grey_scale()
+			{
+				my_data=my_ctx.getImageData(0,0,w,h);
+				len=my_data.data.length/4;
+				for(i=0;i<len;i++)
+				{
+					r=my_data.data[i*4+0];
+					g=my_data.data[i*4+1];
+					b=my_data.data[i*4+2];									
+					a=my_data.data[i*4+3];
+					grey_color=make_gray(r,g,b);
+					my_data.data[i*4+0]=my_data.data[i*4+1]=my_data.data[i*4+2]=grey_color;	
+				}
+				my_ctx.putImageData(my_data,0,0);				
+			}
+			function create_sepia_scale()
+			{
+				my_data=my_ctx.getImageData(0,0,w,h);
+				len=my_data.data.length/4;
+				for(i=0;i<len;i++)
+				{
+					r=my_data.data[i*4+0];
+					g=my_data.data[i*4+1];
+					b=my_data.data[i*4+2];									
+					a=my_data.data[i*4+3];
+					sepia_color=make_sepia(r,g,b);
+					my_data.data[i*4+0]=sepia_color.r;
+					my_data.data[i*4+1]=sepia_color.g;
+					my_data.data[i*4+2]=sepia_color.b;
+				}
+				my_ctx.putImageData(my_data,0,0);				
+			}
+			function create_bright_scale()
+			{
+				my_data=my_ctx.getImageData(0,0,w,h);
+				len=my_data.data.length/4;
+				for(i=0;i<len;i++)
+				{
+					r=my_data.data[i*4+0];
+					g=my_data.data[i*4+1];
+					b=my_data.data[i*4+2];									
+					a=my_data.data[i*4+3];
+					sepia_color=make_bright(r,g,b);
+					my_data.data[i*4+0]=sepia_color.r;
+					my_data.data[i*4+1]=sepia_color.g;
+					my_data.data[i*4+2]=sepia_color.b;
+				}
+				my_ctx.putImageData(my_data,0,0);				
+			}
+			function create_invert_scale()
+			{
+				my_data=my_ctx.getImageData(0,0,w,h);
+				len=my_data.data.length/4;
+				for(i=0;i<len;i++)
+				{
+					r=my_data.data[i*4+0];
+					g=my_data.data[i*4+1];
+					b=my_data.data[i*4+2];									
+					a=my_data.data[i*4+3];
+					sepia_color=make_invert(r,g,b);
+					my_data.data[i*4+0]=sepia_color.r;
+					my_data.data[i*4+1]=sepia_color.g;
+					my_data.data[i*4+2]=sepia_color.b;
+				}
+				my_ctx.putImageData(my_data,0,0);				
+			}			
+			function check_effect(my_id)
+			{
+				gray_check=document.getElementById("gray_image").checked;
+				sepia_check=document.getElementById("sepia_image").checked;	
+				bright_check=document.getElementById("bright_image").checked;			
+				invert_check=document.getElementById("invert_image").checked;		
+				if(my_id=="gray_image" && gray_check==true)
+				{
+					document.getElementById("sepia_image").checked=false;
+					document.getElementById("bright_image").checked=false;
+					document.getElementById("invert_image").checked=false;
+				}	
+				else if(my_id=="sepia_image" && sepia_check==true)
+				{
+					document.getElementById("gray_image").checked=false;
+					document.getElementById("bright_image").checked=false;
+					document.getElementById("invert_image").checked=false;
+				}	
+				else if(my_id=="bright_image" && bright_check==true)
+				{
+					document.getElementById("gray_image").checked=false;
+					document.getElementById("sepia_image").checked=false;
+					document.getElementById("invert_image").checked=false;
+				}
+				else if(my_id=="invert_image" && invert_check==true)
+				{
+					document.getElementById("gray_image").checked=false;
+					document.getElementById("sepia_image").checked=false;
+					document.getElementById("bright_image").checked=false;
+				}		
+				create_meme();
+			}
+			function create_meme()
+			{
+				gray_check=document.getElementById("gray_image").checked;
+				sepia_check=document.getElementById("sepia_image").checked;
+				bright_check=document.getElementById("bright_image").checked;
+				invert_check=document.getElementById("invert_image").checked;		
+				if(gray_check==true)
+				{
+					canvas_init();
+					create_grey_scale();				
+				}
+				else if(sepia_check==true)
+				{
+					canvas_init();
+					create_sepia_scale();					
+				}
+				else if(bright_check==true)
+				{
+					canvas_init();
+					create_bright_scale();					
+				}
+				else if(invert_check==true)
+				{
+					canvas_init();
+					create_invert_scale();					
+				}
+				else
+				{
+					canvas_init();					
+				}
+				canvas_top_write("top_line");
+				canvas_bottom_write("bottom_line");
+			}
+			function save_meme()
+			{
+				window.open(document.getElementById("my_canvas").toDataURL());
+			}
+			document.getElementById("rib").onclick=function(){
+				location.href="https://www.facebook.com/ars.shovon";
+			}
+		</script>		
+	</body>
+</html>
+
