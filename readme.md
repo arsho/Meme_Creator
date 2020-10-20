@@ -1,11 +1,15 @@
- <p>Meme Creator is a simple web application to create meme from any image. <img class="emoji" title=":smiley:" alt=":smiley:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f603.png" height="20" width="20" align="absmiddle"></p>
+## Meme Creator
+
+Meme Creator is a simple web application to create meme from any image.
 
 <hr>
 
-<p>Meme Creator: <a href="http://arsho.github.io/Meme_Creator.html">http://arsho.github.io/Meme_Creator.html</a></p>
+## Demo
 
-<h1>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features:</h1>
+See meme creator demo at: [https://arshovon.com/apps/meme_creator/](https://arshovon.com/apps/meme_creator/)
+
+
+## Features
 
 <ol>
 <li>Ability to add two comments on the meme. One on top and another on bottom.</li>
@@ -18,8 +22,7 @@ Effects are: Black and white, Bright, Sepia and invert</li>
 <li>Automatic resizing of large size images to reduce image size.</li>
 </ol>
 
-<h1>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use:</h1>
+## How to use
 
 <ol>
 <li>Upload an image.</li>
@@ -28,3 +31,10 @@ Effects are: Black and white, Bright, Sepia and invert</li>
 <li>Give any effect as required.</li>
 <li>Click and save the meme!</li>
 </ol>
+
+## Contribution
+
+- Add issues in [https://github.com/arsho/Meme_Creator/issues](https://github.com/arsho/Meme_Creator/issues)
+- Create a branch with the issue name and number.
+- Push changes to the newly created branch.
+- Create a pull request.
