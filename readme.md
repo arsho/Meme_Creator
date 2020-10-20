@@ -2,11 +2,11 @@
 
 Meme Creator is a simple web application to create meme from any image.
 
-<hr>
+![demo/sho_gray.png](demo/sho_gray.png)
 
-## Demo
+## Live
 
-See meme creator demo at: [https://arshovon.com/apps/meme_creator/](https://arshovon.com/apps/meme_creator/)
+See meme creator app at: [https://arshovon.com/apps/meme_creator/](https://arshovon.com/apps/meme_creator/)
 
 
 ## Features
